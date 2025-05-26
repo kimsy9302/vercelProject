@@ -17,9 +17,9 @@ api.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-//환불생성
-export const registerOrder = (payment) =>
-  axios.post(`/api/atelier/order/register`, payment);
+// //환불생성
+// export const registerOrder = (payment) =>
+//   axios.post(`/api/atelier/order/register`, payment);
 
 //환불 단일 조회
 export const getOrderById = (id) => api.get(`/api/atelier/order/${id}`);

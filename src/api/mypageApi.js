@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API_SERVER_HOST = "https://hotelatelier.shop";
-const prefix = `${API_SERVER_HOST}/mypage`;
+const prefix = `${API_SERVER_HOST}/api/atelier/mypage`;
 
 export const getProfile = async () => {
   console.log("[getProfile] 호출됨");
