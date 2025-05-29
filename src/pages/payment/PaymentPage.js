@@ -174,7 +174,7 @@ const PaymentPage = () => {
   };
 
   const firstImage = residence?.images?.[0]
-    ? `https://www.hotelatelier.shop/api/atelier/view/${residence.images[0]}`
+    ? `https://hotelatelier.shop/api/atelier/view/${residence.images[0]}`
     : null;
 
   if (!residence || !userInfo || !summary || !reservationId) {

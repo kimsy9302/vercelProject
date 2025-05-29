@@ -89,7 +89,7 @@ const ResidenceRead = () => {
             <div className="rounded-2xl overflow-hidden shadow-md h-full">
               {images[0] && (
                 <img
-                  src={`https://www.hotelatelier.shop/api/atelier/view/${images[0]}`}
+                  src={`https://hotelatelier.shop/api/atelier/view/${images[0]}`}
                   alt="객실 이미지"
                   className="w-full h-full object-cover"
                 />

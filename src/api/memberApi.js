@@ -2,7 +2,7 @@ import axios from "axios";
 import qs from "qs";
 
 // 반드시 www 포함된 도메인 사용
-export const API_SERVER_HOST = "https://www.hotelatelier.shop";
+export const API_SERVER_HOST = "https://hotelatelier.shop";
 const prefix = `/api/atelier`;
 
 // axios 인스턴스 생성

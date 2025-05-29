@@ -52,7 +52,7 @@ const ReviewPage = () => {
           {/* ▶ 이미지 슬라이드 섹션 */}
           <div className="relative overflow-hidden rounded-xl mb-10">
             <img
-              src={`https://www.hotelatelier.shop/api/atelier/view/${images[currentImageIndex]}`}
+              src={`https://hotelatelier.shop/api/atelier/view/${images[currentImageIndex]}`}
               alt="객실 이미지"
               className="w-full h-[450px] object-cover transition duration-700"
             />
