@@ -1,5 +1,5 @@
 import axios from "axios";
-export const API_SERVER_HOST = "https://hotelatelier.shop";
+export const API_SERVER_HOST = "https:/www.hotelatelier.shop";
 const prefix = `${API_SERVER_HOST}/api/atelier/bakery`;
 
 const getAuthToken = () => {

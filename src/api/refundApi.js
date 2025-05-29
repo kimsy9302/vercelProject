@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://hotelatelier.shop",
+  baseURL: "https://www.hotelatelier.shop",
   withCredentials: true,
 });
 

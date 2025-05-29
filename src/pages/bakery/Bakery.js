@@ -25,7 +25,7 @@ const renderStars = (rating) => {
 const BakeryCard = ({ bakery }) => {
   const imageFile = bakery.images?.[0] || "";
   const imageUrl = imageFile
-    ? `http://hotelatelier.shop/api/atelier/view/${imageFile.replace(
+    ? `https://www.hotelatelier.shop/api/atelier/view/${imageFile.replace(
         /^upload\/bakery\//,
         ""
       )}`

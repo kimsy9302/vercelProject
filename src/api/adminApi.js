@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Axios 인스턴스
 export const adminApi = axios.create({
-  baseURL: "https://hotelatelier.shop/api/atelier",
+  baseURL: "https://www.hotelatelier.shop/api/atelier",
   withCredentials: true,
 });
 
@@ -42,6 +42,6 @@ export const fetchAllOrder = async () => {
 
 export const fetchAdminStats = async () => {
   const res = await adminApi.get("/admin/stats");
-  console.log("🔥 axios 응답: 일단 이거 호출은 돼.", res);
+  console.log("axios 응답: 일단 이거 호출은 돼.", res);
   return res.data;
 };
