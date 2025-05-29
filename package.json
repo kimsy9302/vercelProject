@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A React 18 project with Tailwind CSS",
   "main": "src/index.js",
-  "proxy": "https://hotelatelier.shop",
+  "proxy": "https://www.hotelatelier.shop",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
