@@ -55,7 +55,7 @@ export const RoomCard = ({ room, onClick, avgRating, onReviewClick }) => {
       <div className="relative h-96">
         <Slider {...sliderSettings}>
           {room.images.slice(0, 3).map((img, index) => {
-            const url = `https://www.hotelatelier.shop/api/atelier/view/${img}`;
+            const url = `https://hotelatelier.shop/api/atelier/view/${img}`;
             return (
               <img
                 key={index}

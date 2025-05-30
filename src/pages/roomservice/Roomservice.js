@@ -7,7 +7,7 @@ import { getAllRoomservices } from "../../api/roomserviceApi";
 const RoomServiceCard = ({ service }) => {
   const imageFile = service.images?.[0] || "";
   const imageUrl = imageFile
-    ? `https://www.hotelatelier.shop/api/atelier/view/${imageFile.replace(
+    ? `https://hotelatelier.shop/api/atelier/view/${imageFile.replace(
         /^upload\/roomservice\//,
         ""
       )}`
