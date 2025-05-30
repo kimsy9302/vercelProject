@@ -1,17 +1,16 @@
 import axios from "axios";
-import qs from "qs";
 
-// 반드시 www 포함된 도메인 사용
+// 서버 도메인 (반드시 www 포함)
 export const API_SERVER_HOST = "https://hotelatelier.shop";
 const prefix = `/api/atelier`;
 
-// axios 인스턴스 생성
+// Axios 인스턴스 생성
 const api = axios.create({
   baseURL: API_SERVER_HOST,
-  withCredentials: true,
+  withCredentials: true, // 쿠키 기반 인증을 위해 필요
 });
 
-// 요청 시 Authorization 헤더 자동 삽입
+// 요청 시 Authorization 자동 삽입
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("accessToken");
@@ -23,18 +22,17 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// 로그인 요청 (x-www-form-urlencoded)
+// 로그인 요청 (JSON 기반)
 export const loginPost = async (loginParam) => {
   console.log("loginPost:", loginParam);
   const header = {
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    headers: { "Content-Type": "application/json" },
   };
-  const formData = qs.stringify(loginParam);
-  const res = await api.post(`${prefix}/login`, formData, header);
+  const res = await api.post(`${prefix}/login`, loginParam, header);
   return res.data;
 };
 
-// 로그아웃 요청 (토큰 포함)
+// 로그아웃 요청
 export const logout = async () => {
   const token = localStorage.getItem("accessToken");
   const header = {
@@ -46,7 +44,7 @@ export const logout = async () => {
   return res.data;
 };
 
-// 회원가입 요청 (application/json)
+// 회원가입 요청 (JSON 기반)
 export const signupPost = async (signupParam) => {
   console.log("signupPost:", signupParam);
   const header = { headers: { "Content-Type": "application/json" } };
@@ -54,7 +52,7 @@ export const signupPost = async (signupParam) => {
   return res.data;
 };
 
-// 비밀번호 확인 (JSON 본문 요청)
+// 비밀번호 검증 요청 (JSON 기반)
 export const verifyPassword = async ({ email, password }) => {
   try {
     const res = await api.post(`${prefix}/member/verify-password`, {
